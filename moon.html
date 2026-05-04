@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Moon | Bristol Planetarium</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Back to Milky Way -->
+    <a href="index.html" class="back-home-img">
+        <img src="images/milkyway.png" alt="Back to Milky Way navigation button">
+        <span>Back to Milky Way</span>
+    </a>
+<!-- NAVIGATION - Horizontal Pop-up -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <!-- Menu Button -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span class="menu-text">Menu</span>
+            <span class="hamburger-icon">☰</span>
+        </button>
+
+        <!-- Horizontal Pop-up Menu -->
+        <ul class="nav-horizontal" id="nav-horizontal">
+            <li><a href="index.html" class="nav-btn">
+                <img src="images/milkyway.png" alt="Milky Way navigation button">
+                <span>Milky Way</span>
+            </a></li>
+            
+            <li><a href="solarsystem.html" class="nav-btn">
+                <img src="images/solarsystem.png" alt="Our Solar System navigation button">
+                <span>Our Solar System</span>
+            </a></li>
+            
+            <li><a href="earth.html" class="nav-btn">
+                <img src="images/earth.png" alt="Earth navigation button">
+                <span>Earth</span>
+            </a></li>
+            <li><a href="moon.html" class="nav-btn">
+                 <img src="images/moon.png" alt="Moon navigation button">
+                 <span>Moon</span>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+    <main>
+        <section class="moon-page">
+
+            <!-- Moon Video Background -->
+            <video autoplay muted loop playsinline>
+                <source src="videos/Moon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- text Left Column -->
+            <div class="solar-text left">
+                <h2>The Moon</h2>
+                <p>
+                    The Moon is the only natural satellite of Earth. It orbits around Earth at an average distance of 384,399 kilometres (238,854 mi),[f] a distance roughly 30 times the width of Earth. It completes an orbit (lunar month) in relation to Earth and the Sun (synodically) every 29.5 days. 
+                </p>
+                <p>
+                    The Moon and Earth are bound by gravitational attraction, which is stronger on the sides facing each other. The resulting tidal forces are the main driver of Earth's tides, and have pulled the Moon to always face Earth with the same near side. This tidal locking effectively synchronizes the Moon's rotation period (lunar day) to its orbital period (lunar month). 
+                </p>
+                <p>
+                    For more information: 
+                    <a href="https://en.wikipedia.org/wiki/Moon" target="_blank" rel="noopener">Wikipedia - Moon</a>
+                </p>
+            </div>
+
+            <!-- text Right Column -->
+            <div class="solar-text right">
+                <h2>Lunar Phases</h2>
+                <p>
+                    A lunar phase or Moon phase is the apparent shape of the Moon's day and night phases of the lunar day as viewed from afar. Because the Moon is tidally locked to Earth, the cycle of phases takes one lunar month and moves across the same side of the Moon, which always faces Earth. In common usage, the four major phases are the new moon, the first quarter, the full moon, and the last quarter. 
+                </p>
+                <p>
+                    The four minor phases are waxing crescent, waxing gibbous, waning gibbous, and waning crescent. A lunar month is the time between successive recurrences of the same phase: due to the eccentricity of the Moon's orbit, this duration is not perfectly constant but averages about 29.5 days. 
+                </p>
+                 <p>
+                    For more information: 
+                    <a href="https://en.wikipedia.org/wiki/Lunar_phase" target="_blank" rel="noopener">Wikipedia - Lunar Phases</a>
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

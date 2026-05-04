@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth - Our Home | Bristol Planetarium</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="js/main.js"></script>
+<body>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home-img">
+        <img src="images/milkyway.png" alt="Back to Milky Way   navigation button   ">
+        <span>Back to Milky Way</span>
+    </a>
+<!-- NAVIGATION - Horizontal Pop-up -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <!-- Menu Button -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span class="menu-text">Menu</span>
+            <span class="hamburger-icon">☰</span>
+        </button>
+
+        <!-- Horizontal Pop-up Menu -->
+        <ul class="nav-horizontal" id="nav-horizontal">
+            <li><a href="index.html" class="nav-btn">
+                <img src="images/milkyway.png" alt="Milky Way navigation button">
+                <span>Milky Way</span>
+            </a></li>
+            
+            <li><a href="solarsystem.html" class="nav-btn">
+                <img src="images/solarsystem.png" alt="Our Solar System navigation button">
+                <span>Our Solar System</span>
+            </a></li>
+            
+            <li><a href="earth.html" class="nav-btn">
+                <img src="images/earth.png" alt="Earth navigation button">
+                <span>Earth</span>
+            </a></li>
+            <li><a href="moon.html" class="nav-btn">
+                 <img src="images/moon.png" alt="Moon navigation button">
+                 <span>Moon</span>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main>
+        <section class="earth-page">
+            <!-- Earth Rotation Video Background -->
+         <video autoplay muted loop playsinline>
+             <source src="videos/EarthRotationLoop.mp4" type="video/mp4">
+             Your browser does not support the video tag.
+         </video>
+         <a href="moon.html" class="moon-button">
+            <img src="images/moon.png" alt="Moon navigation button">
+             <span>Explore the Moon</span>
+        </a>
+            <!-- text Left Column -->
+            <div class="solar-text left">
+                <h2>Earth - Our Home</h2>
+                <p>
+                    Earth is the third planet from the Sun and the only astronomical object known to harbor life. 
+                    It formed approximately 4.54 billion years ago and is the densest, largest, and most massive 
+                    of the four rocky terrestrial planets.
+                </p>
+                <p>
+                    <strong>Key Details About Earth:</strong>
+                </p>
+                <ul>
+                    <li><strong>Structure:</strong> Layered interior with inner core, outer core, mantle, and crust.</li>
+                    <li><strong>Orbit & Rotation:</strong> Orbits the Sun in 365.25 days and rotates every 23 hours 56 minutes.</li>
+                    <li><strong>Atmosphere:</strong> Mostly nitrogen (78%) and oxygen (21%).</li>
+                    <li><strong>Life:</strong> Life emerged at least 3.5 billion years ago.</li>
+                    <li><strong>Moon:</strong> Has one natural satellite – the Moon.</li>
+                </ul>
+                <p>
+                    For more information: 
+                    <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noopener">Wikipedia - Earth</a>
+                </p>
+            </div>
+
+            <!-- text Right Column -->
+            <div class="solar-text right">
+                <h2>How Earth and the Moon Formed</h2>
+                <p>
+                    Earth formed from gas and dust orbiting the young Sun. Shortly after, a Mars-sized protoplanet 
+                    called Theia collided with Earth in a giant impact.
+                </p>
+                <p>
+                    <strong>Key Details of Formation:</strong>
+                </p>
+                <ul>
+                    <li><strong>The Giant Impact:</strong> Theia struck Earth, melting both bodies.</li>
+                    <li><strong>Moon Formation:</strong> Debris from the collision formed a ring that coalesced into the Moon.</li>
+                    <li><strong>Scientific Consensus:</strong> The Giant Impact Hypothesis is the leading theory.</li>
+                </ul>
+                <p>
+                    For more information: 
+                    <a href="https://en.wikipedia.org/wiki/Origin_of_the_Moon" target="_blank" rel="noopener">Origin of the Moon</a>
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

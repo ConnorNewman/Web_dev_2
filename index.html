@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bristol Planetarium | Explore the Milky Way</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="js/main.js"></script>
+<body>
+
+
+
+<header>
+    <div class="container">
+        <h1>Bristol Planetarium</h1>
+        <p>Educational entertainment among the stars</p>
+    </div>
+</header>
+
+<!-- NAVIGATION - Hamburger menu Horizontal Pop-up -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <!-- Menu Button -->
+        <button class="nav-toggle" 
+                id="nav-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-horizontal">
+            <span class="menu-text">Menu</span>
+            <span class="hamburger-icon">☰</span>
+        </button>
+
+        <!-- Horizontal Pop-up Menu -->
+        <ul class="nav-horizontal" id="nav-horizontal">
+            <li><a href="index.html" class="nav-btn">
+                <img src="images/milkyway.png" alt="Milky Way navigation button">
+                <span>Milky Way</span>
+            </a></li>
+            
+            <li><a href="solarsystem.html" class="nav-btn">
+                <img src="images/solarsystem.png" alt="Our Solar System navigation button">
+                <span>Our Solar System</span>
+            </a></li>
+            
+            <li><a href="earth.html" class="nav-btn">
+                <img src="images/earth.png" alt="Earth navigation button">
+                <span>Earth</span>
+            </a></li>
+            <li><a href="moon.html" class="nav-btn">
+                 <img src="images/moon.png" alt="Moon navigation button">
+                 <span>Moon</span>
+            </a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+<main id="main-content">
+
+    <!-- homepage -->
+    <section class="homepage">
+        
+        <div class="homepage-content top-left">
+            <h2>Welcome to the Milky Way Galaxy</h2>
+            <h1>Discover the Milky Way</h1>
+            <p>
+                The Galaxy (Milky Way): A massive bar-spiral galaxy approximately 100,000 to 150,000 light-years in diameter, comprising gas, dust, and stars rotating around a supermassive black hole, Sagittarius A*, at its center.<br>
+                Our Location (Orion Arm): We are located in the suburbs of the galaxy, about 25,000–26,000 light-years from the center, situated on a smaller spiral arm called the Orion Arm (or Orion Spur).<br>
+                The Neighborhood (Local Interstellar Cloud): Within the Orion Arm, our solar system travels through a low-density region of the interstellar medium known as the Local Interstellar Cloud.<br>
+                Our Home (The Sol System): Our system consists of the Sun, eight planets, dwarf planets, and countless smaller bodies (asteroids and comets), with the furthest known objects reaching into the Oort Cloud, almost a light-year away.<br>
+            </p>
+                Come and explore the wonders of space with us.
+            </p>
+            <a href="solarsystem.html" class="cta-button">Explore the Sol System →</a>
+        </div>
+
+        <!--youtube VIDEO -->
+        <div class="video-container">
+            <h3>A Journey Through the Cosmos</h3>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/wEZBNsU4dMU"
+                    title="Journey through the Milky Way"
+                    frameborder="0"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="video-caption">
+                Beautiful fly-through of our galaxy.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Bristol Planetarium • Educational Prototype</p>
+</footer>
+
+
+</body>
+</html>

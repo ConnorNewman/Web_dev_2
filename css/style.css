@@ -1,0 +1,698 @@
+/* ====================== ACCESSIBILITY ====================== */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    background: black;
+    color: white;
+    padding: 12px;
+    z-index: 999;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+a:focus,
+button:focus {
+    outline: 3px solid gold;
+    outline-offset: 4px;
+}
+/* ====================== GLOBAL STYLES ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+color: white;
+background: black;
+}
+
+/* HEADER */
+header {
+text-align: center;
+padding: 1rem;
+background: rgba(10, 10, 46, 0.85);
+backdrop-filter: blur(4px);
+position: relative;
+z-index: 10;
+}
+
+/* NAV IMAGE BUTTONS */
+nav {
+background: rgba(10, 10, 46, 0.85);
+backdrop-filter: blur(4px);
+position: relative;
+z-index: 10;
+}
+
+.nav-buttons {
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+list-style: none;
+padding: 1rem 0;
+}
+
+.nav-btn {
+text-decoration: none;
+text-align: center;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: transform 0.3s ease;
+}
+
+/* ROUND BUTTONS with transition */
+.nav-btn img {
+width: 110px;
+height: 110px;
+object-fit: cover;
+border-radius: 50%;
+background: rgba(255,255,255,0.05);
+padding: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btn span {
+margin-top: 0.5rem;
+font-size: 0.95rem;
+}
+
+/* HOVER effects */
+.nav-btn:hover img {
+transform: scale(1.1);
+box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.nav-btn:hover {
+transform: translateY(-3px);
+}
+
+/* Home page */
+.homepage {
+position: relative;
+width: 100%;
+min-height: 100vh;
+overflow: hidden;
+}
+
+/* MOVING BACKGROUND */
+.homepage::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('../images/milkyway.gif') center/cover no-repeat;
+    z-index: -2;        
+}
+/* DARK OVERLAY */
+/*.homepage::after {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: rgba(10, 10, 46, 0.75);
+z-index: -1;
+}
+
+/* ANIMATION */
+@keyframes slowPan {
+from { background-position: 0 0; }
+to   { background-position: -2000px 0; }
+}
+
+/* TEXT */
+.homepage-content.top-left {
+position: absolute;
+top: 22%;
+left: 8%;
+max-width: 500px;
+z-index: 2;
+}
+
+.homepage-content h2 {
+color: gold;
+margin-bottom: 10px;
+}
+
+.homepage-content h1 {
+font-size: 3rem;
+margin-bottom: 15px;
+}
+
+.homepage-content p {
+margin-bottom: 20px;
+}
+
+/* Call to action BUTTON - explore the sol system */
+.cta-button {
+display: inline-block;
+padding: 10px 20px;
+background: gold;
+color: black;
+text-decoration: none;
+border-radius: 6px;
+}
+
+/* youtube VIDEO */
+.video-container {
+position: absolute;
+bottom: 20%;
+right: 3.5%;
+width: 40%;
+max-width: 1000px;
+background: rgba(0,0,0,0.8);
+padding: 1rem;
+border-radius: 10px;
+z-index: 3;
+}
+
+.video-wrapper {
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+}
+
+.video-wrapper iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 1rem;
+background: rgba(10, 10, 46, 0.9);
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+.nav-buttons {
+flex-direction: column;
+gap: 1.5rem;
+}
+
+
+.homepage-content.top-left {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+
+}
+/* SOLAR SYSTEM PAGE (GIF BACKGROUND) */
+
+.solar-page {
+position: relative;
+min-height: 100vh;
+}
+
+/* FULLSCREEN GIF  */
+.solar-page::before {
+content: '';
+position: fixed;
+inset: 0;
+background: url('../images/animatedsolarsystem.gif') center/cover no-repeat;
+z-index: -1;
+}
+
+/* BACK BUTTON (back to home) */
+.back-home-img {
+position: fixed;
+top: 20px;
+left: 20px;
+z-index: 10;
+text-decoration: none;
+color: white;
+text-align: center;
+}
+
+.back-home-img img {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+padding: 8px;
+background: rgba(0,0,0,0.4);
+transition: 0.3s;
+}
+
+.back-home-img span {
+display: block;
+margin-top: 5px;
+font-size: 0.85rem;
+}
+
+.back-home-img:hover img {
+transform: scale(1.1);
+box-shadow: 0 0 15px rgba(255,215,0,0.7);
+}
+
+
+/* TEXT COLUMNS */
+.solar-text {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 22%;
+background: rgba(0, 0, 0, 0.112);
+padding: 1.5rem;
+border-radius: 10px;
+}
+
+/* PUSH TO EDGES */
+.solar-text.left {
+left: 2%;
+}
+
+.solar-text.right {
+right: 2%;
+}
+
+/* ====================== EARTH PAGE ====================== */
+.earth-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+/* Video Background */
+.earth-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -2;
+}
+
+.earth-page video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+   /* filter: brightness(0.75);        /* Slightly darken video for text readability */
+}
+
+/* Dark Overlay */
+/*.earth-page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 46, 0.65);
+    z-index: -1;
+}
+
+/* Text Columns - same styles as solar-page */
+.solar-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28%;
+    background: rgba(0, 0, 0, 0.68);
+    padding: 1.8rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    line-height: 1.65;
+    z-index: 2;
+}
+
+.solar-text.left {
+    left: 6%;
+}
+
+.solar-text.right {
+    right: 6%;
+}
+
+.solar-text h2 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-size: 1.65rem;
+}
+
+.solar-text ul {
+    margin: 1rem 0 1.2rem 0;
+    padding-left: 1.3rem;
+}
+
+.solar-text li {
+    margin-bottom: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .solar-text {
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 85%;
+        margin: 2rem auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .solar-text.left,
+    .solar-text.right {
+        left: auto;
+        right: auto;
+    }
+}
+/* ====================== MAIN NAVIGATION - TOP RIGHT ====================== */
+.main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    position: relative;
+    padding: 1.2rem 2rem;
+}
+
+/* Menu Toggle Button */
+.nav-toggle {
+    background: rgba(10, 10, 46, 0.85);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 215, 0, 0.25);
+    color: #ffd700;
+}
+
+/* ====================== HORIZONTAL POP-UP MENU ====================== */
+.main-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Menu Toggle Button */
+.nav-toggle {
+    background: rgba(10, 10, 46, 0.9);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 215, 0, 0.25);
+    color: #ffd700;
+}
+
+/* Horizontal Menu Container */
+.nav-horizontal {
+    position: absolute;
+    top: 50%;
+    right: 100%;                    /* Position to the left of the button */
+    transform: translateY(-50%);
+    display: none;
+    flex-direction: row;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    background: rgba(10, 10, 46, 0.78);   /* Transparent */
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    z-index: 110;
+    opacity: 0;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+.nav-horizontal.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(-50%) translateX(-20px);   /* Slight slide effect */
+}
+
+/* Sequential Pop-up Animation (Left to Right) */
+.nav-horizontal li {
+    opacity: 0;
+    transform: translateX(30px) scale(0.8);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-horizontal.active li {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+/* Staggered delay */
+.nav-horizontal.active li:nth-child(1) { transition-delay: 0.05s; }
+.nav-horizontal.active li:nth-child(2) { transition-delay: 0.15s; }
+.nav-horizontal.active li:nth-child(3) { transition-delay: 0.25s; }
+
+/* Bigger Horizontal Buttons */
+.nav-horizontal .nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-width: 90px;
+}
+
+.nav-horizontal .nav-btn:hover {
+    background: rgba(255, 215, 0, 0.25);
+    transform: translateY(-4px);
+}
+
+.nav-horizontal .nav-btn img {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.nav-horizontal .nav-btn:hover img {
+    transform: scale(1.1);
+}
+
+.nav-horizontal .nav-btn span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+/* 🌍 PLANET BUTTON ROW */
+.planet-nav {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+/* Make them slightly smaller than main nav (optional) */
+.planet-nav .nav-btn img {
+    width: 85px;
+    height: 85px;
+}
+/* 🌕 MOON BUTTON */
+.moon-button {
+    position: absolute;
+    top: 120px;
+    right: 16%;
+    
+    z-index: 6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+}
+
+/* 3x larger than back button */
+.moon-button img {
+    width: 170px;
+    height: 170px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Label */
+.moon-button span {
+    margin-top: 12px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.moon-button:hover img {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 18px rgba(255,255,255,0.8));
+}
+
+/* LOWER RIGHT TEXT BOX */
+.earth-page .solar-text.right {
+    top: 70%;
+}
+/* ====================== EARTH PAGE ====================== */
+.moon-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+/* Video Background */
+.moon-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -2;
+}
+
+.moon-page video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+   /* filter: brightness(0.75);        /* Slightly darken video for text readability */
+}
+
+/* Dark Overlay */
+/*.moon-page::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 46, 0.65);
+    z-index: -1;
+}
+
+/* Text Columns - Reuse same styles as solar-page */
+.solar-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28%;
+    background: rgba(0, 0, 0, 0.68);
+    padding: 1.8rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    line-height: 1.65;
+    z-index: 2;
+}
+
+.solar-text.left {
+    left: 6%;
+}
+
+.solar-text.right {
+    right: 6%;
+}
+
+.solar-text h2 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-size: 1.65rem;
+}
+
+.solar-text ul {
+    margin: 1rem 0 1.2rem 0;
+    padding-left: 1.3rem;
+}
+
+.solar-text li {
+    margin-bottom: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .solar-text {
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 85%;
+        margin: 2rem auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .solar-text.left,
+    .solar-text.right {
+        left: auto;
+        right: auto;
+    }
+}
